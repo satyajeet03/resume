@@ -1,5 +1,4 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 
 interface AnimatedSectionProps {
   id?: string
@@ -14,17 +13,14 @@ export function AnimatedSection({
   className = '',
   delay = 0,
 }: AnimatedSectionProps) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
-
   return (
     <motion.section
       id={id}
-      ref={ref}
       initial={{ opacity: 0, y: 24 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.01, margin: '-120px 0px -80px 0px' }}
       transition={{ duration: 0.65, ease: 'easeOut', delay }}
-      className={className}
+      className={`scroll-mt-24 md:scroll-mt-28 ${className}`}
     >
       {children}
     </motion.section>
