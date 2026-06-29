@@ -16,7 +16,7 @@ export function HeroSection() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-sm text-sky-200">
             <Sparkles size={16} />
-            Senior Frontend Engineer • Product-minded builder
+            Senior Frontend Engineer
           </div>
 
           <div className="space-y-5">
