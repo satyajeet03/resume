@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Layers3 } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa6'
 import { projects } from '../../data/content'
 import { AnimatedSection } from '../ui/AnimatedSection'
@@ -25,15 +25,7 @@ export function ProjectsSection() {
             whileHover={{ y: -6, scale: 1.01 }}
             className="group flex h-full flex-col rounded-[1.75rem] border border-white/10 bg-slate-900/70 p-6 shadow-[0_16px_50px_rgba(15,23,42,0.32)]"
           >
-            {/* <div className="rounded-[1.25rem] border border-white/10 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 p-5">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full border border-sky-400/20 bg-sky-500/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-sky-300">
-                  Featured
-                </span>
-                <Layers3 size={18} className="text-slate-400" />
-              </div>
-              <div className="mt-8 h-32 rounded-[1rem] border border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.2),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.18),transparent_44%)]" />
-            </div> */}
+            
 
             <div className="mt-6 flex-1">
               <h3 className="text-2xl font-semibold text-slate-50">{project.title}</h3>
